@@ -14,7 +14,7 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
+        <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>    <!-- endbuild -->
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -22,20 +22,29 @@
         <![endif]-->
 
 
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-            <li>Sass</li>
-
-          </ul>
+        <div class="header">
+            <div class="topbar"></div>
+            <img src="http://4vector.com/i/free-vector-blue-camera-lens-clip-art_106565_Blue_Camera_Lens_clip_art_hight.png">
+            <h1> PhotoGram </h1>
         </div>
+
+        <input class="inputURL input" placeholder="Enter Image URL" value=""></input>
+        <input class="inputCaption input" placeholder="Enter Caption" value=""></input>
+        <button class="uploadPhoto">Upload</button>
+
+        <div class="container">
+
+        <script type="text/template" class="picture-template">
+        <img src="<%= url %>" width="300" height="300"/>
+        </script>
+
+
 
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/underscore/underscore.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
