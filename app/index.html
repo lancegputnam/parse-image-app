@@ -14,7 +14,8 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
-        <link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>    <!-- endbuild -->
+        <link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>    <!-- endbuild -->
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -29,16 +30,18 @@
         </div>
 
         <div class="input-container">
-        <input class="URLinput" type="text" placeholder="Add an image URL...">
-        <input class="captioninput" type="text" placeholder="Add a caption...">
-        <button class="uploadPhoto button">Create New Photo</button>
+            <input class="URLinput" type="text" placeholder="Add an image URL...">
+            <input class="captioninput" type="text" placeholder="Add a caption...">
+            <button class="uploadPhoto button">Create New Photo</button>
         </div>
 
         <div class="container">
 
         <script type="text/template" class="image-template">
-            <img src="<%= objectURL %>" width="550" height="550"/>
-            //caption
+            <div class="galleryView">
+                <img src="<%= objectURL %>" width="550" height="550"/>
+                <span class="Caption"> <%= Caption %> </span>
+            </div>
         </script>
 
 
