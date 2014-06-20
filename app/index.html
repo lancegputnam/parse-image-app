@@ -14,7 +14,7 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
-        <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>    <!-- endbuild -->
+        <link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>    <!-- endbuild -->
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -24,18 +24,21 @@
 
         <div class="header">
             <div class="topbar"></div>
-            <img src="http://4vector.com/i/free-vector-blue-camera-lens-clip-art_106565_Blue_Camera_Lens_clip_art_hight.png">
-            <h1> PhotoGram </h1>
+            <img src="http://2.bp.blogspot.com/-ggy0NCNVxAc/TkHJyGqwHyI/AAAAAAAACZI/Izrg3dNU0E0/s1600/Camera2BTFC.png">
+            <h1> FolkGram </h1>
         </div>
 
-        <input class="inputURL input" placeholder="Enter Image URL" value=""></input>
-        <input class="inputCaption input" placeholder="Enter Caption" value=""></input>
-        <button class="uploadPhoto">Upload</button>
+        <div class="input-container">
+        <input class="URLinput" type="text" placeholder="Add an image URL...">
+        <input class="captioninput" type="text" placeholder="Add a caption...">
+        <button class="uploadPhoto button">Create New Photo</button>
+        </div>
 
         <div class="container">
 
-        <script type="text/template" class="picture-template">
-        <img src="<%= url %>" width="300" height="300"/>
+        <script type="text/template" class="image-template">
+            <img src="<%= objectURL %>" width="550" height="550"/>
+            //caption
         </script>
 
 
@@ -61,6 +64,9 @@
         </script>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/model.js"></script>
+        <script src="scripts/collection.js"></script>
+        <script src="scripts/view.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
