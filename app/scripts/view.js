@@ -39,3 +39,11 @@ var ImageView = Parse.View.extend({
     }
 });
 
+$(window).resize(function(){
+  if ($(window).width() <= 600){  
+    $('.header img').hide()
+  };
+    if ($(window).width() >= 600){  
+    $('.header img').show()
+  } 
+});
