@@ -1,3 +1,5 @@
+"use strict";
+
 var ImageView = Parse.View.extend({
 
   classname: 'photoPost',
@@ -6,7 +8,7 @@ var ImageView = Parse.View.extend({
 
   events: {
 
-    "click .uploadPhoto": "displayImage"
+    "click .uploadImage": "displayImage"
   },
 
   initialize: function(){
@@ -16,7 +18,7 @@ var ImageView = Parse.View.extend({
   }, 
 
   render: function(){
-    console.log('this.model',this.model)
+    console.log('this.model',this.model);
     var renderedTemplate = this.imageTemplate(this.model.attributes);
     this.$el.html(renderedTemplate);
     return this;
@@ -24,43 +26,16 @@ var ImageView = Parse.View.extend({
   },
 
   displayImage: function(){
-    console.log(this.model)
-      ImageCollection.add(this.model)
+    console.log(this.model);
+      ImageCollection.add(this.model);
       $('.container').append(detail);
 
-      var renderTemp = this.imageTemplate(this.model.attributes)
+      var renderTemp = this.imageTemplate(this.model.attributes);
       this.$el.html(renderTemp);
 
-      this.model.save().done(function(){
-      that.$el.find('.status').html('Saved!');
-      });
+      // this.model.save().done(function(){
+      // that.$el.find('.status').html('Saved!');
+      // });
     }
-
-    
-    
-      // var post = new Parse.Object('Post');
-      // var url = $('.uploadPhoto').val();
-      // post.set('url', url);
-
-      // post.save().done(function(){
-      //   var detail = new DetailView({model: this.model});
-        // $('.container').append(detail);
-
-      // })
-  
-  //   var that = this;
-
-  //   this.model.set({
-  //     url:      this.$el.find('.inputURL').val(),
-  //     caption:  this.$el.find('.inputCaption').val()
-  //   });
-
-  //   showPhotos.add(this.model)
-
-  //   this.model.save().done(function(){
-  //     that.$el.find('.status').html('Saved!');
-  //   });
-  // }
-
 });
 
