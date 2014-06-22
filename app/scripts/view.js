@@ -35,6 +35,8 @@ var ImageView = Parse.View.extend({
       that.$el.find('.status').html('Saved!');
       });
     }
+
+    
     
       // var post = new Parse.Object('Post');
       // var url = $('.uploadPhoto').val();

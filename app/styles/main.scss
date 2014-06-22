@@ -114,7 +114,9 @@ h1 {
 }
 
 .canvas-container {
-    float: left;
+    // float: left;
+    height: 0px;
+    width: 900px;
 }
 
 // .images img {
@@ -125,7 +127,9 @@ h1 {
 // }
 
 canvas {
-    margin-top: 200px;
+    margin-top: 0px;
+    height: 0px;
+    width: 900px;
     z-index: 40;
 }
 
