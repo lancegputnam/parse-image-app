@@ -29,10 +29,15 @@
             <h1> FolkGram </h1>
         </div>
 
+
         <div class="input-container">
             <input class="URLinput" type="text" placeholder="Add an image URL...">
             <input class="captioninput" type="text" placeholder="Add a caption...">
             <button class="uploadPhoto button">Create New Photo</button>
+        </div>
+
+         <div class="canvas-container">
+            <canvas id="canvas" width="900" height="1500"></canvas>
         </div>
 
         <div class="container">
@@ -51,6 +56,7 @@
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/underscore/underscore.js"></script>
+        <script src="../bower_components/fabric/dist/fabric.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -70,6 +76,7 @@
         <script src="scripts/model.js"></script>
         <script src="scripts/collection.js"></script>
         <script src="scripts/view.js"></script>
+        <script src="scripts/fabric.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

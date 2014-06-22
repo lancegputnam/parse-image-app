@@ -30,6 +30,10 @@ var ImageView = Parse.View.extend({
 
       var renderTemp = this.imageTemplate(this.model.attributes)
       this.$el.html(renderTemp);
+
+      this.model.save().done(function(){
+      that.$el.find('.status').html('Saved!');
+      });
     }
     
       // var post = new Parse.Object('Post');
