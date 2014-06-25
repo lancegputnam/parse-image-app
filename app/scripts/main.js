@@ -10,68 +10,35 @@ $('.uploadImage').click(function() {
 	// myPost.set('objectURL', $('.URLinput').val());
 	// myPost.set('Caption', $('.captioninput').val());
 
-	var myPost = posts.add({objectURL: imgVal, Caption: captionVal});
+	// added last becauase myPost is calling the model, not the collection 
+	var myPost = posts.add({objectURL: imgVal, Caption: captionVal}).last();
 
-	// myPost.save();
+	console.log('myPost should be ', myPost);
+	console.log('the image URL should be: ', imgVal);
+	console.log('the caption should be: ', captionVal);
 
-// 	myPost.save(null, {
-//   		success: function(myPost) {
-//     // Execute any logic that should take place after the object is saved.
-//     	alert('Image Added');
-//  	},
-//   		error: function(myPost) {
-//     // Execute any logic that should take place if the save fails.
-//     // error is a Parse.Error with an error code and description.
-//     	alert('Failed to add new image');
-//   	}
-// });
+	myPost.save();
 
-$('.uploadImage').click(function(){
- 
-	var fileUploadControl = $(".URL-input")[0];
-	if (fileUploadControl.files.length > 0) {
-	  var file = fileUploadControl.files[0];
-	  var name = "photo.jpg";
-	 
-	  var parseFile = new Parse.File(name, file);
-	}
- 
-	var uploadPromise = parseFile.save()
- 
- 
-	uploadPromise.then(function() {
-		console.log("success")
-		}, function(error) {
-			console.log("No")
-	});
- 
- 
-	uploadPromise.done(function(){
- 
-		var uploadPhoto = new Parse.Object("UploadPhoto");
-		uploadPhoto.set("photo", parseFile.url() );
-		uploadPhoto.set("caption", $('.caption').val() );
-		uploadPhoto.set("photoRef", parseFile);
- 
-		app.collection.add(uploadPhoto)
- 
-		uploadPhoto.save()
- 
-	})
- 
-});
+	// myPost.save(null, {
+ //  		success: function(myPost) {
+ //    // Execute any logic that should take place after the object is saved.
+ //    	alert('Image Added');
+ // 		},
+ //  		error: function(myPost) {
+ //    // Execute any logic that should take place if the save fails.
+ //    // error is a Parse.Error with an error code and description.
+ //    	alert('Failed to add new image');
+ //  		}
+	// });
+
 
 	$('.URL-input').val('');
 	$('.caption-input').val('');
 
 });
 
+posts.fetch({add: true});
+
 posts.on('add', function(model){
 	new ImageView({model: model});
 });
-
-posts.fetch({add: true});
-
-
-
-
