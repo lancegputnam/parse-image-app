@@ -37,8 +37,10 @@ $('.uploadImage').click(function() {
 
 });
 
-posts.fetch({add: true});
+
 
 posts.on('add', function(model){
 	new ImageView({model: model});
 });
+
+posts.fetch({add: true});
