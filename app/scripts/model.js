@@ -14,13 +14,3 @@ var Post = Parse.Object.extend({
 
 // Create the post
 // var myPost = new Post();
-
-
- 
-// Create the comment
-// var myComment = new Comment();
-// $('.uploadPhoto').click(function(){
-// 	myComment.set('url', $('.inputCaption').val());
-// 	myComment.set("parent", myPost);
-// 	myComment.save();
-// })
