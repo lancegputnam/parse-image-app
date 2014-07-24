@@ -1,6 +1,6 @@
 Image Application 
 ===============
-After working with Backbone, our class made the transition to Parse and created photo applications with the language. FolkGram allows you to add a photo and caption, which will post on the application. You can also add and resize a frame over the main image, which is done in part by Fabric.JS. The next step in this application will be to allow for ability to add a frame or filter over any image and allow the user the save the image.
+After working with Backbone, our class made the transition to Parse and created photo applications with the language. FolkGram allows you to add a photo and caption, which will post on the application. You can also add and resize a frame over the main image, which is done in part by Fabric.JS. The next step in this application will be to allow for the ability to add a frame or filter over any image and allow the user to then save the image.
 
 Primary Technologies: <br>
 HTML, CSS, JavaScript, Backbone, Parse, Fabric.JS 
